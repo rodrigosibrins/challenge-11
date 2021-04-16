@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "challenge11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigosibrins/challenge-11.git"
+  },
+  "author": "Rodrigo Gonzalez Sibrins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigosibrins/challenge-11/issues"
+  },
+  "homepage": "https://github.com/rodrigosibrins/challenge-11#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
