@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
 const port = 4000;
-
+let user;
 
 app.use(express.json());
-
 
 app.use('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -15,10 +14,19 @@ app.use('*', function (req, res, next) {
 });
 
 function handleRegister(req, res){
-    console.log(req.body);
+    user = req.body;
+    res.send("Success!");
+    console.log(user);
 }
 
-function handleLogin(req, res){}
+function handleLogin(req, res){
+    let userPassword = req.body.password;
+    if (user != null && user.password == userPassword){
+        res.send("Success!");
+    } else{
+        res.send("User not found");
+    }
+}
 
 app.post('/register', handleRegister);
 app.put('/login', handleLogin);
